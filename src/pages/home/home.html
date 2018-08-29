@@ -9,6 +9,7 @@
 <ion-content padding>
   <div style="display:flex; flex-direction:column;justify-content:center">
     <button ion-button (click)="capture()">Lets take a picture!</button>
+    <img [src]="captureDataUrl" *ngIf="captureDataUrl"/>
   </div>
-
+  <button ion-button (click)="upload()" *ngIf="captureDataUrl">Upload to Firebase!</button>
 </ion-content>
